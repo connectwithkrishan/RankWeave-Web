@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account deletion Request - RankWeave Digital Marketplace</title>
+  <meta name="description" content="Google Play Console compliant Privacy Policy for RankWeave. Read how we collect, store, and protect user data with Firebase Auth & Firestore, and how to request account deletion." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              blue: '#2563EB',
+              accent: '#3B82F6',
+              light: '#F8FAFC',
+              slate: '#64748B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white">Rank<span class="text-blue-500">Weave</span></span>
+            <span class="block text-[10px] text-slate-400 font-medium tracking-wider uppercase -mt-1">Directory & Marketplace</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="/" class="nav-link text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="/services" class="nav-link text-slate-300 hover:text-white transition-colors">Services</a>
+          <a href="/about" class="nav-link text-slate-300 hover:text-white transition-colors">About</a>
+          <a href="/contact" class="nav-link text-slate-300 hover:text-white transition-colors">Contact</a>
+          <a href="/faq" class="nav-link text-slate-300 hover:text-white transition-colors">FAQs</a>
+          <a href="/privacy-policy" class="nav-link text-slate-300 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms" class="nav-link text-slate-300 hover:text-white transition-colors">Terms of Service</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <button class="trigger-download-modal inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-lg shadow-blue-600/30 transition-all">
+            Download App
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Home</a>
+      <a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Services</a>
+      <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">About</a>
+      <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Contact</a>
+      <a href="/faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">FAQs</a>
+      <a href="/privacy-policy" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Privacy Policy</a>
+      <a href="/terms" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Terms of Service</a>
+      <div class="pt-2">
+        <button class="trigger-download-modal w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm">Download App</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <section class="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          <span>Google Play Console Compliant Document</span>
+        </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">Account Deletion Request</h1>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN DOCUMENT CONTENT ================= -->
+  <main class="py-12 md:py-16 bg-white flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Table of Contents Sidebar -->
+        <aside class="lg:col-span-4 hidden lg:block">
+          <div class="sticky top-28 bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+            <h3 class="font-display font-bold text-slate-900 text-sm tracking-wider uppercase">Table of Contents</h3>
+            <ul class="space-y-2 text-xs text-slate-600 font-medium">
+              <li><a href="#method1" class="hover:text-blue-600 block py-1">Method 1: Delete Account via RankWeave Mobile App / Web (Instant)</a></li>
+              <li><a href="#method2" class="hover:text-blue-600 block py-1">Method 2: Request Manual Account Deletion</a></li>
+              <li><a href="#data-deleted" class="hover:text-blue-600 block py-1">What Data Will Be Deleted?</a></li>
+              <li><a href="#data-retention" class="hover:text-blue-600 block py-1">Data Retention (What We May Keep)</a></li>
+              <li><a href="#need-help" class="hover:text-blue-600 block py-1">Need Help?</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Policy Body Text -->
+        <article class="lg:col-span-8 space-y-10 text-slate-700 text-sm leading-relaxed">
+
+          <section id="overview" class="space-y-3 border-b border-slate-200 pb-8">
+            <p>
+              At RankWeave, we value your privacy and give you full control over your personal data. If you wish to delete your account and associated data, you can do so at any time through our app or by submitting a manual request on this page.
+            </p>
+          </section>
+          
+          <section id="method1" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">Method 1: Delete Account via RankWeave Mobile App / Web (Instant)</h2>
+            <p>
+              The fastest way to delete your account is directly from within your logged-in account:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li>Open the RankWeave app or log in at rankweaveapp.com.</li>
+                <li>Go to Settings &rarr; Account Settings.</li>
+                <li>Scroll down and click on Delete Account.</li>
+            </ul>
+            <p>
+              Once confirmed, your account will be instantly deactivated and scheduled for permanent deletion.
+            </p>
+          </section>
+
+          <section id="method2" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">Method 2: Request Manual Account Deletion</h2>
+            <p>
+              If you no longer have access to the app or cannot log in, please fill out the request form below or email us:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li><strong>Email Subject Subject:</strong> Account Deletion Request - [Your Registered Email]</li>
+                <li><strong>Send Email To:</strong> privacy@rankweaveapp.com (or support@rankweaveapp.com)</li>
+                <li><strong>Details Required:</strong>
+                <ul style="list-style-type: square;">
+                  <li>Your Registered Email Address</li>
+                  <li>Registered Phone Number (if applicable)</li>
+                  <li>Reason for deletion (Optional)</li>
+                </ul>
+                </li>
+            </ul>
+            <p>
+              Our support team will process your request and complete the deletion within 7 to 14 business days.
+            </p>
+          </section>
+
+          <section id="data-deleted" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">What Data Will Be Deleted?</h2>
+            <p>
+              When your account deletion request is processed, the following data will be permanently removed:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li><strong>Profile Information:</strong> Name, email address, profile picture, phone number, and account credentials.</li>
+                <li><strong>Listings & Content:</strong> All active listings, drafts, posts, and saved items created by you.</li>
+                <li><strong>Chat History & Messages:</strong> All personal message history associated with your email ID.</li>
+                <li>Notification Preferences & Saved Searches.</li>
+            </ul>
+          </section>
+
+          <section id="data-retention" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">Data Retention (What We May Keep)</h2>
+            <p>
+              To comply with legal, regulatory, and security obligations, certain data may be retained for a limited period before permanent purge:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li><strong>Transaction & Financial Records:</strong> Retained as required by applicable tax and commercial laws.</li>
+                <li><strong>Security & Fraud Logs:</strong> Anonymized logs maintained to prevent fraud and platform abuse.</li>
+            </ul>
+          </section>
+
+          <section id="need-help" class="space-y-3">
+            <h2 class="font-display font-bold text-2xl text-slate-900">Need Help?</h2>
+            <p>
+              If you have any questions regarding your data privacy or the account deletion process, please contact us at:
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-1">
+              <p><strong>RankWeave Help & Support Desk</strong></p>
+              <p>Support Email: <a href="mailto:support@rankweave.com" class="text-blue-600 underline font-semibold">support@rankweave.com</a></p>
+              <p>Contact Email: <a href="mailto:contact@rankweave.com" class="text-blue-600 underline font-semibold">contact@rankweave.com</a></p>
+              <p>Website: <a href="/" class="text-blue-600 underline">https://rankweaveapp.com</a></p>
+            </div>
+          </section>
+
+          <!-- INTERACTIVE ACCOUNT DELETION REQUEST FORM -->
+          <section id="deletion-request" class="bg-blue-50/70 p-6 sm:p-8 rounded-2xl border-2 border-blue-200 space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl text-slate-900">Account & Data Deletion Request Form</h2>
+                <!-- <span class="text-xs text-blue-700 font-semibold">Google Play Console Data Safety Compliance</span>-->
+              </div>
+            </div> 
+
+            <p class="text-slate-600 text-xs">
+              You can also submit account deletion application via this form:
+            </p>
+
+            <form id="deletion-form" class="bg-white p-5 rounded-xl border border-blue-200 space-y-4 text-xs">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-bold text-slate-800 mb-1">Registered Account Email *</label>
+                  <input type="email" required id="del-email" placeholder="user@example.com" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block font-bold text-slate-800 mb-1">Registered Phone Number</label>
+                  <input type="tel" id="del-phone" placeholder="+1 (555) 000-0000" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-bold text-slate-800 mb-1">Reason for Account Deletion (Optional)</label>
+                <select id="del-reason" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                  <option value="no_longer_needed">No longer using the platform</option>
+                  <option value="privacy_concern">Privacy / Data concerns</option>
+                  <option value="duplicate_account">Duplicate account</option>
+                  <option value="other">Other reason</option>
+                </select>
+              </div>
+
+              <div class="pt-1 flex items-center space-x-2">
+                <input type="checkbox" required id="del-confirm" class="w-4 h-4 text-blue-600 rounded border-slate-300" />
+                <label for="del-confirm" class="text-slate-600 text-[11px]">I confirm that I want all my account data, active directory listings, and chat logs permanently removed within 30 days.</label>
+              </div>
+
+              <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs shadow-md transition-colors">
+                Submit Account Deletion Request
+              </button>
+            </form>
+          </section>
+
+          
+          
+
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between text-slate-500 text-[11px] space-y-4 md:space-y-0">
+        <div>
+          <span class="font-bold text-white">RankWeave Privacy & Legal Compliance Desk</span>
+          <p>© 2026 RankWeave, Inc. All rights reserved.</p>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="/" class="hover:text-white">Home</a>
+          <a href="/services" class="hover:text-white">Services</a>
+          <a href="/about" class="hover:text-white">About</a>
+          <a href="/contact" class="hover:text-white">Contact</a>
+          <a href="/faq" class="hover:text-white">FAQs</a>
+          <a href="/privacy-policy" class="hover:text-white">Privacy Policy</a>
+          <a href="/terms" class="hover:text-white">Terms of Service</a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Download Modal -->
+  <div id="download-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full relative space-y-4 text-center text-white">
+      <button id="close-download-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">✕</button>
+      <h3 class="font-display font-extrabold text-xl">Download RankWeave</h3>
+      <p class="text-xs text-slate-400">Available on Google Play & App Store.</p>
+      <button onclick="showToast('Initiating Google Play Download...');" class="w-full py-3 rounded-xl bg-blue-600 font-bold text-xs">Get it on Google Play</button>
+    </div>
+  </div>
+
+  <script src="/public/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const delForm = document.getElementById('deletion-form');
+      if (delForm) {
+        delForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('del-email').value;
+          showToast(`Account deletion request for ${email} submitted successfully! Support ticket #DEL-${Math.floor(100000 + Math.random() * 900000)} generated.`);
+          delForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

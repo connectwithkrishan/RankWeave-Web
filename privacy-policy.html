@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - RankWeave Digital Marketplace</title>
+  <meta name="description" content="Google Play Console compliant Privacy Policy for RankWeave. Read how we collect, store, and protect user data with Firebase Auth & Firestore, and how to request account deletion." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              blue: '#2563EB',
+              accent: '#3B82F6',
+              light: '#F8FAFC',
+              slate: '#64748B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30 group-hover:scale-105 transition-transform">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white">Rank<span class="text-blue-500">Weave</span></span>
+            <span class="block text-[10px] text-slate-400 font-medium tracking-wider uppercase -mt-1">Directory & Marketplace</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="/" class="nav-link text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="/services" class="nav-link text-slate-300 hover:text-white transition-colors">Services</a>
+          <a href="/about" class="nav-link text-slate-300 hover:text-white transition-colors">About</a>
+          <a href="/contact" class="nav-link text-slate-300 hover:text-white transition-colors">Contact</a>
+          <a href="/faq" class="nav-link text-slate-300 hover:text-white transition-colors">FAQs</a>
+          <a href="/privacy-policy" class="nav-link text-blue-400 font-semibold transition-colors">Privacy Policy</a>
+          <a href="/terms" class="nav-link text-slate-300 hover:text-white transition-colors">Terms of Service</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <button class="trigger-download-modal inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-lg shadow-blue-600/30 transition-all">
+            Download App
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Home</a>
+      <a href="/services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Services</a>
+      <a href="/about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">About</a>
+      <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Contact</a>
+      <a href="/faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">FAQs</a>
+      <a href="/privacy-policy" class="block px-3 py-2 rounded-md text-base font-medium text-blue-400 bg-slate-800">Privacy Policy</a>
+      <a href="/terms" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Terms of Service</a>
+      <div class="pt-2">
+        <button class="trigger-download-modal w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm">Download App</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <section class="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          <span>Google Play Console Compliant Document</span>
+        </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">Privacy Policy</h1>
+        <p class="text-slate-400 text-sm sm:text-base">Effective Date: August 07, 2026 | Last Updated: August 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN DOCUMENT CONTENT ================= -->
+  <main class="py-12 md:py-16 bg-white flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Table of Contents Sidebar -->
+        <aside class="lg:col-span-4 hidden lg:block">
+          <div class="sticky top-28 bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+            <h3 class="font-display font-bold text-slate-900 text-sm tracking-wider uppercase">Table of Contents</h3>
+            <ul class="space-y-2 text-xs text-slate-600 font-medium">
+              <li><a href="#overview" class="hover:text-blue-600 block py-1">1. Overview & Scope</a></li>
+              <li><a href="#data-collection" class="hover:text-blue-600 block py-1">2. Information We Collect</a></li>
+              <li><a href="#infrastructure" class="hover:text-blue-600 block py-1">3. Third-Party Infrastructure & Data Processors</a></li>
+              <li><a href="#how-we-use" class="hover:text-blue-600 block py-1">4. How We Use Your Data</a></li>
+              <li><a href="#global-data-rights" class="hover:text-blue-600 block py-1">5. Global Data Rights & Compliance (GDPR / CCPA)</a></li>
+              <li><a href="#data-sharing" class="hover:text-blue-600 block py-1">6. Data Sharing & Third Parties</a></li>
+              <li><a href="#security" class="hover:text-blue-600 block py-1">7. Data Security & Retention</a></li>
+              <li><a href="#deletion" class="hover:text-blue-600 block py-1">8. Account & Data Deletion (Play Console Compliance)</a></li>
+              <li><a href="#children" class="hover:text-blue-600 block py-1">9. Children's Privacy</a></li>
+              <li><a href="#contact" class="hover:text-blue-600 block py-1">10. Contact Information</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Policy Body Text -->
+        <article class="lg:col-span-8 space-y-10 text-slate-700 text-sm leading-relaxed">
+          
+          <section id="overview" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">1. Overview & Scope</h2>
+            <p>
+              Welcome to <strong>RankWeave</strong> ("we," "our," or "us"). RankWeave operates a global digital marketplace connecting buyers (SEO professionals, marketers, agencies) directly with verified website owners, authorized outreach editors, sellers, SEO experts and freelancers for guest posts, link insertions, and digital services.
+            </p>
+            <p>
+              This Privacy Policy applies to our website (https://rankweaveapp.com), mobile applications (Android and iOS), and web dashboard services. We are strictly committed to complying with Google Play Developer Policies, General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and global privacy standards.
+            </p>
+          </section>
+
+          <section id="data-collection" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">2. Information We Collect</h2>
+            <p>We collect personal and transactional data to provide a secure and transparent marketplace experience:</p>
+            
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-xs">
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li><strong>Personal Identity Data:</strong> Full Name, Email Address, Phone Number, Location, and Company Details provided during registration or profile setup.</li>
+                <li><strong>Marketplace & Directory Listing Data:</strong> Website URLs, Domain Authority (DA), Page Authority (PA), Organic Traffic, Spam Score, Niche Categories, Sample Posts, Turnaround Time (TAT), and Pricing expectations submitted for public publication.</li>
+                <li><strong>Communication & Chat Logs:</strong> Messages, offer proposals, link requirements, and discussions exchanged directly between buyers and sellers via our secure messaging infrastructure.</li>
+                <li><strong>Technical & Device Data:</strong> IP Address, device model, operating system version, app usage analytics, and unique device identifiers collected for security, error monitoring, and fraud prevention.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="infrastructure" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">3. Third-Party Infrastructure & Data Processors</h2>
+            <p>
+              To ensure maximum speed and data security, RankWeave utilizes enterprise-grade infrastructure providers:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-slate-600">
+              <li><strong>Google Firebase Authentication:</strong> Manages secure user login, password encryption, single sign-on (SSO), and account verification. Passwords are never stored in plain text.</li>
+              <li><strong>Cloud Firestore Database:</strong> Encrypts directory listings, agency portfolios, buyer inquiries, and rating reviews at rest and in transit using SSL/TLS encryption protocols.</li>
+              <li><strong>Analytics Services:</strong> Aggregated app usage tracking and performance metrics via Google Analytics for Firebase.</li>
+              <li><strong>Hosting Platforms:</strong> Secure global hosting for the web dashboard and static web resources.</li>
+            </ul>
+          </section>
+
+          <section id="how-we-use" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">4. How We Use Your Information</h2>
+            <p>We process collected data for explicit and legitimate business purposes:</p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li>To publish, manage, and display marketplace listings and seller profiles.</li>
+              <li>To verify website ownership (via DNS TXT verification, HTML meta tags, or admin proof) and award Verified Users Checkmarks (Green Badges) or Verified Companies/Agencies Checkmarks (Blue Badges).</li>
+              <li>To facilitate direct buyer-to-seller messaging, order discussions, and inquiry alerts.</li>
+              <li>To detect and prevent platform abuse, fraud, fake domain listings, PBN spam, and unauthorized account access.</li>
+              <li>To send essential platform alerts, security updates, and account notifications.</li>
+              <li>Ensuring compliance with Google Play Store policies and legal regulations.</li>
+            </ul>
+          </section>
+
+          <section id="global-data-rights" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">5. Global Data Rights & Compliance (GDPR / CCPA)</h2>
+            <p>
+              Regardless of your geographic location, RankWeave extends full control over your personal data:
+            </p>
+            <ul class="list-disc pl-5 space-y-2 text-slate-600">
+              <li><strong>Right to Access:</strong> ) You can request a copy of the personal data we store about your account.</li>
+              <li><strong>Right to Rectification:</strong> You can edit, update, or correct your profile details and marketplace listings directly inside your account settings.</li>
+              <li><strong>Right to Erasure (Data Deletion):</strong> You have the right to permanently delete your account, active domain listings, and associated data.</li>
+              <li><strong>Data Protection Guarantee:</strong> We never sell, rent, or trade your personal data or chat communications to third-party advertisers or data brokers.</li>
+            </ul>
+          </section>
+
+          <section id="data-sharing" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">6. Data Sharing & Third Parties</h2>
+            <p>
+              We <strong>never sell, rent, or trade your personal information</strong> to third-party advertisers. Data is shared strictly under the following conditions:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li><strong>Directory Public Profile:</strong> Information you explicitly choose to publish in a listing (e.g., website traffic stats, public profile, agency portfolio, price expectations) is viewable by registered buyers.</li>
+              <li><strong>Service Infrastructure:</strong> Google Cloud & Firebase (Hosting, Firestore, Authentication) and Google Analytics for aggregated performance tracking.</li>
+              <li><strong>Legal Obligations:</strong> When required by court order, law enforcement, or regulatory compliance mandates.</li>
+            </ul>
+          </section>
+
+          <section id="security" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">7. Data Security & Retention</h2>
+            <p>
+              We enforce strict technical and physical safeguards to protect your information:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li><strong>In-Transit Protection:</strong> All data transmitted between your browser/mobile app and our servers is encrypted using standard HTTPS/TLS protocols.</li>
+              <li><strong>At-Rest Protection:</strong> User data and database entries in Firebase Firestore are encrypted using 256-bit AES encryption.</li>
+              <li><strong>Data Retention:</strong> Personal data is retained only for as long as your account remains active or as needed to maintain service functionality and fulfill legal obligations.</li>
+            </ul>
+          </section>
+
+          <section id="deletion" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">8. Account & Data Deletion (Play Console Compliance)</h2>
+            <p>
+              In compliance with Google Play Data Safety guidelines, RankWeave users can request complete account and data deletion at any time without hassle:
+            </p>
+            <ul class="list-disc pl-5 space-y-1.5 text-slate-600">
+              <li><strong>In-App Deletion:</strong> Go to `login Account -> Profile -> Delete Account` inside the RankWeave mobile app or web dashboard.</li>
+              <li><strong>Web Deletion Request:</strong> Users can also request manual account deletion by visiting our dedicated Account Deletion page or emailing us directly.</li>
+              <li><strong>Data Purge:</strong> Upon account deletion, all personal credentials, active marketplace listings, saved bookmarks, and direct chat logs will be permanently removed from our databases within 30 days.</li>
+            </ul>
+          </section>
+
+          <!-- INTERACTIVE ACCOUNT DELETION REQUEST FORM 
+          <section id="deletion-request" class="bg-blue-50/70 p-6 sm:p-8 rounded-2xl border-2 border-blue-200 space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+              </div>
+              <div>
+                <h2 class="font-display font-extrabold text-xl text-slate-900">8. Account & Data Deletion Request</h2>
+                <span class="text-xs text-blue-700 font-semibold">Google Play Console Data Safety Compliance</span>
+              </div>
+            </div> 
+
+            <p class="text-slate-600 text-xs">
+              In accordance with Google Play Developer Policies and global privacy regulations, RankWeave users have the right to request full deletion of their account, personal profile, submitted business listings, and associated data stored in Firebase Auth and Firestore.
+            </p>
+
+            <form id="deletion-form" class="bg-white p-5 rounded-xl border border-blue-200 space-y-4 text-xs">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-bold text-slate-800 mb-1">Registered Account Email *</label>
+                  <input type="email" required id="del-email" placeholder="user@example.com" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block font-bold text-slate-800 mb-1">Registered Phone Number</label>
+                  <input type="tel" id="del-phone" placeholder="+1 (555) 000-0000" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-bold text-slate-800 mb-1">Reason for Account Deletion (Optional)</label>
+                <select id="del-reason" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                  <option value="no_longer_needed">No longer using the platform</option>
+                  <option value="privacy_concern">Privacy / Data concerns</option>
+                  <option value="duplicate_account">Duplicate account</option>
+                  <option value="other">Other reason</option>
+                </select>
+              </div>
+
+              <div class="pt-1 flex items-center space-x-2">
+                <input type="checkbox" required id="del-confirm" class="w-4 h-4 text-blue-600 rounded border-slate-300" />
+                <label for="del-confirm" class="text-slate-600 text-[11px]">I confirm that I want all my account data, active directory listings, and chat logs permanently removed within 30 days.</label>
+              </div>
+
+              <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-xs shadow-md transition-colors">
+                Submit Account Deletion Request
+              </button>
+            </form>
+          </section> -->
+
+          <section id="children" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">9. Children's Privacy</h2>
+            <p>
+              RankWeave is a professional commercial marketplace and does not knowingly collect or solicit personal information from individuals under the age of 18. If we discover that a minor has created an account, it will be deleted immediately.
+            </p>
+          </section>
+
+          <section id="contact" class="space-y-3">
+            <h2 class="font-display font-bold text-2xl text-slate-900">10. Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact our Data Protection Officer:</p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-1">
+              <p><strong>RankWeave Privacy Desk</strong></p>
+              <p>Email: <a href="mailto:privacy@rankweave.com" class="text-blue-600 underline font-semibold">privacy@rankweave.com</a></p>
+              <p>Support Email: <a href="mailto:support@rankweave.com" class="text-blue-600 underline font-semibold">support@rankweave.com</a></p>
+              <p>Contact Email: <a href="mailto:contact@rankweave.com" class="text-blue-600 underline font-semibold">contact@rankweave.com</a></p>
+              <p>Website: <a href="/" class="text-blue-600 underline">https://rankweaveapp.com</a></p>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between text-slate-500 text-[11px] space-y-4 md:space-y-0">
+        <div>
+          <span class="font-bold text-white">RankWeave Privacy & Legal Compliance Desk</span>
+          <p>© 2026 RankWeave, Inc. All rights reserved.</p>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="/" class="hover:text-white">Home</a>
+          <a href="/services" class="hover:text-white">Services</a>
+          <a href="/about" class="hover:text-white">About</a>
+          <a href="/contact" class="hover:text-white">Contact</a>
+          <a href="/faq" class="hover:text-white">FAQs</a>
+          <a href="/privacy-policy" class="hover:text-white">Privacy Policy</a>
+          <a href="/terms" class="hover:text-white">Terms of Service</a>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Download Modal -->
+  <div id="download-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full relative space-y-4 text-center text-white">
+      <button id="close-download-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">✕</button>
+      <h3 class="font-display font-extrabold text-xl">Download RankWeave</h3>
+      <p class="text-xs text-slate-400">Available on Google Play & App Store.</p>
+      <button onclick="showToast('Initiating Google Play Download...');" class="w-full py-3 rounded-xl bg-blue-600 font-bold text-xs">Get it on Google Play</button>
+    </div>
+  </div>
+
+  <script src="/public/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const delForm = document.getElementById('deletion-form');
+      if (delForm) {
+        delForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const email = document.getElementById('del-email').value;
+          showToast(`Account deletion request for ${email} submitted successfully! Support ticket #DEL-${Math.floor(100000 + Math.random() * 900000)} generated.`);
+          delForm.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

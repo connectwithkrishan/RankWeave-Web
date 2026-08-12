@@ -1,0 +1,6 @@
+{
+  "name": "RankWeave",
+  "description": "Premier digital marketplace and business directory platform connecting buyers with top websites, companies, agencies, and digital service providers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

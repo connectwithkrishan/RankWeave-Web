@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - RankWeave Marketplace</title>
+  <meta name="description" content="Terms of Service and Marketplace Rules for RankWeave. Read user conduct obligations, directory listing rules, escrow guidelines, and limitations of liability." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              blue: '#2563EB',
+              accent: '#3B82F6',
+              slate: '#64748B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="font-display font-extrabold text-2xl tracking-tight text-white">Rank<span class="text-blue-500">Weave</span></span>
+            <span class="block text-[10px] text-slate-400 font-medium tracking-wider uppercase -mt-1">Directory & Marketplace</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="/" class="nav-link text-slate-300 hover:text-white transition-colors">Home</a>
+          <a href="/services" class="nav-link text-slate-300 hover:text-white transition-colors">Services</a>
+          <a href="/about" class="nav-link text-slate-300 hover:text-white transition-colors">About Us</a>
+          <a href="/contact" class="nav-link text-slate-300 hover:text-white transition-colors">Contact Us</a>
+          <a href="/privacy-policy" class="nav-link text-slate-300 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="/terms" class="nav-link text-blue-400 font-semibold transition-colors">Terms of Service</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:flex items-center space-x-4">
+          <button class="trigger-download-modal px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-lg shadow-blue-600/30 transition-all">
+            Download App
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+      <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Home</a>
+      <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Services</a>
+      <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">About Us</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Contact Us</a>
+      <a href="privacy-policy.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Privacy Policy</a>
+      <a href="terms.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-400 bg-slate-800">Terms of Service</a>
+      <div class="pt-2">
+        <button class="trigger-download-modal w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm">Download App</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PAGE HEADER ================= -->
+  <section class="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-semibold border border-blue-500/20">
+          <span>Official Marketplace Terms</span>
+        </div>
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">Terms of Service</h1>
+        <p class="text-slate-400 text-sm sm:text-base">Last Revision: August 2026 | Effective for all RankWeave Users</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MAIN TERMS CONTENT ================= -->
+  <main class="py-12 md:py-16 bg-white flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Table of Contents Sidebar -->
+        <aside class="lg:col-span-4 hidden lg:block">
+          <div class="sticky top-28 bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-3">
+            <h3 class="font-display font-bold text-slate-900 text-sm tracking-wider uppercase">Quick Navigation</h3>
+            <ul class="space-y-2 text-xs text-slate-600 font-medium">
+              <li><a href="#acceptance" class="hover:text-blue-600 block py-1">1. Acceptance of Terms</a></li>
+              <li><a href="#account" class="hover:text-blue-600 block py-1">2. Account Registration</a></li>
+              <li><a href="#directory-rules" class="hover:text-blue-600 block py-1">3. Business Directory Listing Rules</a></li>
+              <li><a href="#marketplace-conduct" class="hover:text-blue-600 block py-1">4. Marketplace Conduct & Fraud Prohibition</a></li>
+              <li><a href="#escrow" class="hover:text-blue-600 block py-1">5. Transaction & Payment Guidelines</a></li>
+              <li><a href="#codeofconduct" class="hover:text-blue-600 block py-1">6. Platform Usage & Code of Conduct</a></li>
+              <li><a href="#ip" class="hover:text-blue-600 block py-1">7. Intellectual Property & Platform Rights</a></li>
+              <li><a href="#termination" class="hover:text-blue-600 block py-1">8. Account Suspension & Termination</a></li>
+              <li><a href="#liability" class="hover:text-blue-600 block py-1">9. Disclaimers & Limitation of Liability</a></li>
+              <li><a href="#modifications" class="hover:text-blue-600 block py-1">10. Modifications to Terms</a></li>
+              <li><a href="#dispute" class="hover:text-blue-600 block py-1">11. Governing Law & Dispute Resolution</a></li>
+              <li><a href="#contact-terms" class="hover:text-blue-600 block py-1">12. Contact & Support</a></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Terms Body -->
+        <article class="lg:col-span-8 space-y-10 text-slate-700 text-sm leading-relaxed">
+          
+          <section id="acceptance" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">1. Acceptance of Terms</h2>
+            <p>
+              By accessing or using the RankWeave website(https://rankweaveapp.com), mobile applications (Android and iOS), or web dashboard, you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, you may not access or use our platform or services.
+            </p>
+            <p>
+              RankWeave operates as a global marketplace connecting buyers (SEO professionals, marketers, agencies) directly with website owners, authorized outreach editors, Sellers and SEO Experts for guest posts, link insertions, backlinks and digital services.
+            </p>
+          </section>
+
+          <section id="account" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">2. Account Registration</h2>
+            <p>
+              To browse verified listings, contact sellers, or list website assets, users must register an account. You agree to provide accurate, truthful, and complete information during registration and keep your account details updated. You are solely responsible for maintaining the security of your account login credentials and for all activities that occur under your account.
+            </p>
+          </section>
+
+          <section id="directory-rules" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">3. Marketplace Listing & Verification Standards</h2>
+            <p>Sellers and Editors listing websites or services on RankWeave must adhere to strict platform quality guidelines:</p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-xs">
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li><strong>Ownership & Access Proof:</strong> You must own or be legally authorized to represent any website, domain, SaaS product, or digital agency portfolio submitted.</li>
+                <li><strong>Accurate SEO Metrics:</strong> All metrics (Domain Authority, Page Authority, Organic Traffic, Spam Score) must be genuine. Artificially inflated claims or PBN submissions are strictly prohibited. RankWeave reserves the right to audit and remove listings with fraudulent stats.</li>
+                <li><strong>Prohibited Listings:</strong> Domains promoting illegal activities, malware, deceptive schemes, copyright infringement, extreme harmful or policy-violating content are strictly banned.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="marketplace-conduct" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">4. Marketplace Conduct & Fraud Prohibition</h2>
+            <p>
+              Users are strictly prohibited from spamming, harassment, fee avoidance, submitting artificial reviews, or misrepresenting website access. Violations will result in immediate listing removal and permanent account termination.
+            </p>
+          </section>
+
+          <section id="escrow" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">5. Transaction & Payment Guidelines</h2>
+            <p>
+              RankWeave provides a direct marketplace connecting buyers and sellers. Content requirements, turnaround times (TAT), link types (dofollow/nofollow), and pricing discussed within the in-app chat constitute binding agreements between the respective parties. RankWeave does not guarantee specific search engine ranking fluctuations resulting from placed links.
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-xs">
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li><strong>Direct Communication:</strong> RankWeave facilitates direct communication between buyers and sellers via in-app chat. Users are expected to maintain professional conduct in all negotiations.</li>
+                <li><strong>Deliverable Agreements:</strong> Turnaround times (TAT), link permanence (dofollow/nofollow), and content guidelines discussed and agreed upon in chat form binding commitments between the buyer and the seller.</li>
+                <li><strong>No Guarantee of SEO Results:</strong> While RankWeave ensures verified domain metrics, we do not guarantee specific search engine ranking improvements or traffic increases resulting from backlinks acquired on the platform.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="codeofconduct" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">6. Platform Usage & Code of Conduct</h2>
+            <p>
+              You agree not to:
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-xs">
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li>Use automated bots, scrapers, or unauthorized tools to extract data or listings from RankWeave.</li>
+                <li>Attempt to bypass account security, reverse engineer, or disrupt platform infrastructure.</li>
+                <li>Engage in spamming, harassment, or fraudulent practices against other members.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="ip" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">7. Intellectual Property & Platform Rights</h2>
+            <p>
+              All branding, designs, logos, website layout, text copy, graphics, and software underlying the RankWeave platform are the exclusive property of RankWeave. Users retain ownership of their logos, domain brand assets, and original article materials provided for guest blogging.
+            </p>
+          </section>
+
+          <section id="termination" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">8. Account Suspension & Termination</h2>
+            <p>
+              RankWeave reserves the right to suspend or permanently terminate any account, delete active listings, or restrict platform access without prior notice if:
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2 text-xs">
+              <ul class="list-disc pl-5 space-y-1.5 text-slate-700">
+                <li>You violate any provision of these Terms of Service.</li>
+                <li>You submit fraudulent domain ownership claims or fake SEO metrics.</li>
+                <li>Required by legal regulatory authorities or Google Play / App Store policies.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="liability" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">9. Disclaimers & Limitation of Liability</h2>
+            <p>
+              RankWeave provides the marketplace platform on an "as is" and "as available" basis. To the maximum extent permitted by applicable law, RankWeave and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues arising out of your use of, or inability to use, the platform.
+            </p>
+          </section>
+
+          <section id="modifications" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">10. Modifications to Terms</h2>
+            <p>
+              We reserve the right to update or modify these Terms at any time. Changes will become effective immediately upon posting to the website. Your continued use of RankWeave after any updates constitutes acceptance of the revised Terms.
+            </p>
+          </section>
+
+          <section id="dispute" class="space-y-3 border-b border-slate-200 pb-8">
+            <h2 class="font-display font-bold text-2xl text-slate-900">11. Governing Law & Dispute Resolution</h2>
+            <p>
+              These Terms shall be governed by and construed in accordance with international commercial standards and applicable local laws, without regard to conflict of law principles.
+            </p>
+          </section>
+
+          <section id="contact-terms" class="space-y-3">
+            <h2 class="font-display font-bold text-2xl text-slate-900">12. Contact & Support</h2>
+            <p>If you have any questions or concerns regarding these Terms of Service or marketplace guidelines, please contact us:</p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs">
+              <p>Email: <a href="mailto:support@rankweave.com" class="text-blue-600 font-semibold underline">support@rankweave.com</a></p>
+              <p>Website: <a href="rankweave.com" class="text-blue-600 font-semibold underline">rankweaveapp.com</a></p>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-center justify-between text-slate-500 text-[11px] space-y-4 md:space-y-0">
+        <p>© 2026 RankWeave, Inc. All rights reserved.</p>
+        <div class="flex items-center space-x-6">
+          <a href="/" class="hover:text-white">Home</a>
+          <a href="/services" class="hover:text-white">Services</a>
+          <a href="/about" class="hover:text-white">About Us</a>
+          <a href="/contact" class="hover:text-white">Contact Us</a>
+          <a href="/terms" class="hover:text-white">Terms of Service</a>
+          <a href="/privacy-policy" class="hover:text-white">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Download Modal -->
+  <div id="download-modal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 max-w-md w-full relative space-y-4 text-center text-white">
+      <button id="close-download-modal" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">✕</button>
+      <h3 class="font-display font-extrabold text-xl">Download RankWeave</h3>
+      <p class="text-xs text-slate-400">Available on Google Play & App Store.</p>
+      <button onclick="showToast('Initiating Google Play Download...');" class="w-full py-3 rounded-xl bg-blue-600 font-bold text-xs">Get it on Google Play</button>
+    </div>
+  </div>
+
+  <script src="/public/app.js"></script>
+</body>
+</html>
