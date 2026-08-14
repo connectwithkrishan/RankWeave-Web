@@ -436,8 +436,8 @@
           Get RankWeave on Google Play
         </button>
 
-        <a href="contact.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-base border border-slate-700 transition-colors">
-          Contact Support Desk
+        <a href="/contact" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-base border border-slate-700 transition-colors">
+          Contact & Support Desk
         </a>
 
       </div>
@@ -454,7 +454,9 @@
         <!-- Brand Column -->
         <div class="lg:col-span-2 space-y-4">
           <a href="/" class="flex items-center space-x-3">
-            <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-sm">RW</div>
+            <div class="w-11 h-11 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 p-1 flex items-center justify-center shadow-lg shadow-blue-500/10 group-hover:scale-105 group-hover:border-blue-500/60 transition-all">
+              <img src="assets/logo_b.png" alt="RankWeave Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+            </div>
             <span class="font-display font-extrabold text-xl text-white">Rank<span class="text-blue-500">Weave</span></span>
           </a>
           <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
@@ -467,7 +469,8 @@
           <h4 class="font-bold text-white text-sm tracking-wider uppercase text-[11px]">Platform</h4>
           <ul class="space-y-2">
             <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-            <li><a href="/services" class="hover:text-white transition-colors">Services & Directory</a></li>
+            <li><a href="/services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="/faq" class="hover:text-white transition-colors">FAQs</a></li>
             <li><a href="/about" class="hover:text-white transition-colors">About RankWeave</a></li>
             <li><a href="/contact" class="hover:text-white transition-colors">Contact & Helpdesk</a></li>
           </ul>
@@ -669,9 +672,9 @@
       // Screenshot Image File Paths (Update paths if your folder structure differs)
       const screenImages = {
         feed: 'assets/marketplace.jpg',
-        profile: 'assets/marketplace.jpg',
-        chat: 'assets/marketplace.jpg',
-        directory: 'assets/marketplace.jpg'
+        profile: 'assets/profile_img.png',
+        chat: 'assets/chat_img.jpg',
+        directory: 'assets/directory_img.png'
       }
 
         // Tab Click Event Listener
