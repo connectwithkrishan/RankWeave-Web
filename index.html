@@ -395,13 +395,13 @@
           </button>
           </div>
         <!-- Phone Preview Frame -->
-        <div class="w-full lg:w-auto flex justify-center">
+        <div class="w-full max-w-[320px] mx-auto bg-slate-950 p-3 sm:p-4 rounded-[36px] sm:rounded-[44px] shadow-2xl border border-slate-800">
           <!-- Phone Frame Screen Inner -->
-          <div class="relative w-full h-[460px] bg-white rounded-[28px] overflow-hidden border border-slate-800 shadow-inner">
+          <div class="relative w-full aspect-[9/18] bg-white rounded-[24px] sm:rounded-[30px] overflow-hidden">
             <img id="screen-display" 
               src="assets/marketplace.jpg"
               alt="App Screen Preview" 
-              class="w-full h-full object-cover transition-opacity duration-300"
+              class="w-full h-full object-contain object-top transition-opacity duration-300"
               />
           </div>
         </div>
