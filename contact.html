@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact & Help Desk - RankWeave Marketplace</title>
+  <title>Contact, Support & Help Desk - RankWeave Marketplace</title>
   <meta name="description" content="Get in touch with RankWeave Support Desk. Submit inquiries, listing claims, or data deletion requests. Email: support@rankweave.com." />
+
+  <!-- FAVICON Icon -->
+  <link rel="icon" type="image/png" href="assets/logo0.png">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,10 +46,8 @@
         
         <!-- Logo -->
         <a href="/" class="flex items-center space-x-3 group">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-            </svg>
+          <div class="w-11 h-11 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 p-1 flex items-center justify-center shadow-lg shadow-blue-500/10 group-hover:scale-105 group-hover:border-blue-500/60 transition-all">
+            <img src="assets/logo_b.png" alt="RankWeave Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
           </div>
           <div>
             <span class="font-display font-extrabold text-2xl tracking-tight text-white">Rank<span class="text-blue-500">Weave</span></span>
@@ -60,6 +61,7 @@
           <a href="/services" class="nav-link text-slate-300 hover:text-white transition-colors">Services</a>
           <a href="/about" class="nav-link text-slate-300 hover:text-white transition-colors">About</a>
           <a href="/contact" class="nav-link text-blue-400 font-semibold transition-colors">Contact</a>
+          <a href="/faq" class="nav-link text-slate-300 hover:text-white transition-colors">FAQs</a>
           <a href="/privacy-policy" class="nav-link text-slate-300 hover:text-white transition-colors">Privacy Policy</a>
           <a href="/terms" class="nav-link text-slate-300 hover:text-white transition-colors">Terms of Service</a>
         </nav>
@@ -69,6 +71,7 @@
           <button class="trigger-download-modal px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-lg shadow-blue-600/30 transition-all">
             Download App
           </button>
+          <button class="trigger-download-modal px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm shadow-lg shadow-blue-600/30 transition-all">Dashboard</button>
         </div>
 
         <!-- Mobile Menu Toggle -->
@@ -91,8 +94,11 @@
       <a href="/contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-400 bg-slate-800">Contact</a>
       <a href="/faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">FAQs</a>
       <a href="/privacy-policy" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Privacy Policy</a>
-      <div class="pt-2">
+      <a href="/terms" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white">Terms of Service</a>
+      
+      <div class="pt-2 flex flex-col gap-3">
         <button class="trigger-download-modal w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm">Download App</button>
+        <button class="trigger-download-modal w-full py-3 rounded-xl bg-blue-600 text-white font-semibold text-sm">Dashboard</button>
       </div>
     </div>
   </header>
@@ -212,15 +218,26 @@
   <!-- ================= FOOTER ================= -->
   <footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+      <div class="lg:col-span-2 space-y-4">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="w-11 h-11 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 p-1 flex items-center justify-center shadow-lg shadow-blue-500/10 group-hover:scale-105 group-hover:border-blue-500/60 transition-all">
+            <img src="assets/logo_b.png" alt="RankWeave Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+          </div>
+          <span class="font-display font-extrabold text-xl text-white">Rank<span class="text-blue-500">Weave</span></span>
+        </a>
+      </div>
+      
       <div class="flex flex-col md:flex-row items-center justify-between text-slate-500 text-[11px] space-y-4 md:space-y-0">
-        <p>© 2026 RankWeave, Inc. All rights reserved. Support Email: support@rankweave.com</p>
+        <p>© 2026 RankWeave, Inc. All rights reserved.</p>
         <div class="flex items-center space-x-6">
           <a href="/" class="hover:text-white">Home</a>
           <a href="/services" class="hover:text-white">Services</a>
           <a href="/about" class="hover:text-white">About</a>
-          <a href="/contact" class="hover:text-white">Contact</a>
-          <a href="/terms" class="hover:text-white">Terms of Service</a>
+          <a href="/contact" class="text-white font-bold">Contact</a>
+          <a href="/faq" class="hover:text-white">FAQs</a>
           <a href="/privacy-policy" class="hover:text-white">Privacy Policy</a>
+          <a href="/terms" class="hover:text-white">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -247,22 +264,6 @@
           const ticketId = 'RW-' + Math.floor(100000 + Math.random() * 900000);
           showToast(`Thank you ${name}! Support ticket #${ticketId} submitted. We will reply to your email within 24 hours.`);
           contactForm.reset();
-        });
-      }
-
-      // FAQ Live Search
-      const faqSearch = document.getElementById('faq-search');
-      const faqItems = document.querySelectorAll('.faq-item');
-      if (faqSearch) {
-        faqSearch.addEventListener('input', () => {
-          const query = faqSearch.value.toLowerCase().trim();
-          faqItems.forEach(item => {
-            if (query === '' || item.innerText.toLowerCase().includes(query)) {
-              item.classList.remove('hidden');
-            } else {
-              item.classList.add('hidden');
-            }
-          });
         });
       }
     });
